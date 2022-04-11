@@ -8,6 +8,7 @@ const SignupForm = props => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    username:'',
     password: '',
     passwordConf: '',
   })
@@ -31,10 +32,10 @@ const SignupForm = props => {
     }
   }
 
-  const { name, email, password, passwordConf } = formData
+  const { name, email, username, password, passwordConf } = formData
 
   const isFormInvalid = () => {
-    return !(name && email && password && password === passwordConf)
+    return !(name && email && username && password && password === passwordConf)
   }
 
   return (
@@ -62,6 +63,17 @@ const SignupForm = props => {
           id="email"
           value={email}
           name="email"
+          onChange={handleChange}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="username" className={styles.label}>Username</label>
+        <input
+          type="text"
+          autoComplete="off"
+          id="username"
+          value={username}
+          name="username"
           onChange={handleChange}
         />
       </div>
