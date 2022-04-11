@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 
+
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
@@ -7,7 +8,9 @@ const NavBar = ({ user, handleLogout }) => {
         <nav>
           <ul>
             <li>Welcome, {user.name}</li>
-            <li><Link to="/profiles">Profiles</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/createimage">Create Image</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
           </ul>
         </nav>

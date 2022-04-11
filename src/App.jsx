@@ -4,7 +4,9 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
-import Profiles from './pages/Profiles/Profiles'
+import Profile from './pages/Profile/Profile'
+import CreateImage from './pages/CreateImage/CreateImage'
+import Blogs from './pages/Blogs/Blogs'
 import * as authService from './services/authService'
 
 const App = () => {
@@ -36,8 +38,16 @@ const App = () => {
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
         <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          path="/profile"
+          element={user ? <Profile user={user} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/createimage"
+          element={<CreateImage />}
+        />
+        <Route
+          path="/blogs"
+          element={<Blogs />}
         />
       </Routes>
     </>
