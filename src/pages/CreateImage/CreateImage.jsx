@@ -14,7 +14,7 @@ const CreateImage = () => {
         console.log(formData)
     },[formData])
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         console.log('sanity check - submit pressed', formData)
         let toSend = new FormData()
@@ -25,7 +25,8 @@ const CreateImage = () => {
             console.log('my entry: ', entries)
         }
 
-        artworkService.create(toSend)
+        let returnedFromCreate = await artworkService.create(toSend)
+        console.log(returnedFromCreate)
 
     }
 
