@@ -7,6 +7,7 @@ import Landing from './pages/Landing/Landing'
 import Profile from './pages/Profile/Profile'
 import CreateImage from './pages/CreateImage/CreateImage'
 import Blogs from './pages/Blogs/Blogs'
+import BlogsNew from './pages/Blogs/BlogsNew'
 import * as authService from './services/authService'
 
 const App = () => {
@@ -48,6 +49,10 @@ const App = () => {
         <Route
           path="/blogs"
           element={<Blogs />}
+        />
+        <Route
+          path="/blogs/new"
+          element={<BlogsNew />}
         />
       </Routes>
     </>
