@@ -1,3 +1,5 @@
+import { ArtworkCard } from "./ArtworkCard"
+
 function ProfilesArtworkContainer ({artwork}) {
 
   return (
@@ -7,10 +9,7 @@ function ProfilesArtworkContainer ({artwork}) {
         
         artwork.map(art => (
           <li>
-          <img
-          src = {art.artworkLink}
-          alt = 'generated img'
-          />
+            <ArtworkCard art={art}/>
           </li>
         ))
        

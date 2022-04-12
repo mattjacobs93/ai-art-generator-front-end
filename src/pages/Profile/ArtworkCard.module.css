@@ -1,0 +1,33 @@
+/* Place holder for image sizes for now */
+img{
+    width:300px;
+    height:300px;
+}
+
+
+.imagesContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "contentImage generatedImage"
+  "styleImage generatedImage"
+  ;
+}
+
+.contentImage {
+  grid-area: contentImage;
+}
+
+.generatedImage{
+  grid-area:generatedImage;
+}
+
+.styleImage {
+  grid-area: styleImage;
+}
+
+.generatedImage img {
+  height: 600px;
+  width: 600px;
+}
