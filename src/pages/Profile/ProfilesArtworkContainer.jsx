@@ -9,7 +9,10 @@ function ProfilesArtworkContainer ({artwork}) {
         
         artwork.map(art => (
           <li>
-            <ArtworkCard art={art}/>
+            <ArtworkCard 
+              art={art} 
+              key={art.id}
+            />
           </li>
         ))
        

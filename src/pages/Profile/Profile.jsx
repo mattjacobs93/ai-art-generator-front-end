@@ -6,10 +6,6 @@ import ProfilesArtworkContainer from './ProfilesArtworkContainer'
 const Profile = ({user}) => {
   const [profilesArtwork, setProfilesArtwork] = useState()
 
-  // useEffect(()=> {
-  //   profileService.getAllProfiles()
-  //   .then(profiles => setProfiles(profiles))
-  // }, [])
 
   useEffect(()=>{
     console.log(user)
