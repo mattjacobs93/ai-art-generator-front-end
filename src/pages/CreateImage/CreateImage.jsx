@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import * as artworkService from '../../services/artworkService.js'
+import { useNavigate } from "react-router-dom";
 
 
 const CreateImage = () => {
     const [formData, setFormData] = useState({})
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
        // console.log(e.target.files[0])
@@ -27,6 +29,7 @@ const CreateImage = () => {
 
         let returnedFromCreate = await artworkService.create(toSend)
         console.log(returnedFromCreate)
+        navigate('/profile')
 
     }
 
