@@ -5,7 +5,7 @@
   right:0;
   bottom:0;
   overflow-y:auto;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.4);
   display:flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,18 @@
 
 .modalBody{
   width:500px;
-  background-color: white;
+  max-width:50%;
+  background-color:whitesmoke;
+}
+
+.textArea{
+  width:200px;
+  max-width:50%;
+  height:600px;
+  max-height:100%;
+  background-color:whitesmoke;
+  align-content: flex-start;
+  justify-content: flex-start;
 }
 
 .modal button{
@@ -25,7 +36,34 @@
   color: white;
 }
 
-.modal img{
-  height:50%;
-  width:50%;
+.bigImg{
+  align-items: center;
+  display: flex;
+  max-width: 600px;
+  width:100%;
 }
+
+.bigImg img{
+  max-width: 500px;
+    max-height: 500px;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.smallImg{
+  justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    width:100%;
+}
+
+.smallImg img{
+  max-width: 250px;
+    max-height: 250px;
+    width:100%;
+    /* object-fit:cover; */
+}
+
