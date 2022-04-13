@@ -9,28 +9,30 @@ function BlogCard ({blog}) {
   return (
     <div>
         <div className={styles.imagesContainer}>
-          <div className={styles.contentImage}>
-            <img
-              src = {blog?.contentLink}
-              alt = 'content img'
-              />
-          </div>
-          <div className={styles.contentStyle}>
-            <img
-              src = {blog?.styleLink}
-              alt = 'style img'
-              />
-          </div>
           <div className={styles.generatedImage}>
             <img
               src = {blog?.artworkLink}
               alt = 'generated img'
               />
           </div>
-        </div>
+          <div className={styles.ContentStyle}>
+            <img
+              src = {blog?.contentLink}
+              alt = 'content img'
+              />
+            <img
+            src = {blog?.styleLink}
+            alt = 'style img'
+            />
+          </div>
+          {/* <div className={styles.contentStyle}>
+            
+          </div> */}
+          
         <div className={styles.caption}>
             <h3>{blog?.caption}</h3>
         </div>        
+      </div>
     </div>
   )
 
