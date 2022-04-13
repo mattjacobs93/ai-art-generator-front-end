@@ -38,7 +38,7 @@ const getAll = async () => {
 function createComment (comment) {
   console.log('about to send new comment to backend...comment: ', comment)
     return fetch(`${BASE_URL}${comment.blog_id}/comment/new/`, {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         // "Access-Control-Allow-Origin":"*",
         // "mode":"cors",
