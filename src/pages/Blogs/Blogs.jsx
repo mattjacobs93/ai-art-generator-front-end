@@ -3,18 +3,21 @@ import * as blogService from "../../services/blogService"
 import { BlogCard } from './BlogCard'
 // import { BlogModal } from './BlogModal'
 import BlogModal from './BlogModal'
+import EditAndDelete from './EditAndDelete'
 
-const Blogs = () => {
+const Blogs = ({user}) => {
     const [blogs, setBlogs] = useState()
     const [show, setShow] = useState(false)
     const [XBlogModal, setXBlogModal] = useState(null)
+    const [update, setUpdate] = useState({})
+    const forceUpdate = () => {
+        setUpdate({...update})
+    }
     
     useEffect(()=>{
-        if (!blogs) {
-            blogService.getAll()
-            .then(returnedBlogs => setBlogs(returnedBlogs))
-        }
-    },[blogs])
+        blogService.getAll()
+        .then(returnedBlogs => setBlogs(returnedBlogs))
+    },[update])
 
     const handleShow = () => setShow(true)
     const handleClose = () => {
@@ -24,11 +27,17 @@ const Blogs = () => {
 
     return ( 
         <>
+                        
             
             {
                 blogs ?
                 <>
                     {blogs?.map(blog => (
+                        <div>
+
+                        <div>
+                            {user?.id === blog?.profile_id && forceUpdate ? <EditAndDelete blog={blog} forceUpdate={forceUpdate}/> : <div></div>}
+                        </div>
                         <div onClick={() => {
                             setXBlogModal(blog); 
                             handleShow();
@@ -36,6 +45,7 @@ const Blogs = () => {
         
                         <BlogCard 
                             blog={blog}
+                            user={user}
                             key={blog.id}
                         />
                     
@@ -45,6 +55,7 @@ const Blogs = () => {
                             show={show}
                         />
                         
+                        </div>
                         </div>
                     ))}
                 </>

@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react'
 // import { createBlog } from "../../services/blogService"
 import * as blogService from "../../services/blogService"
 
-const BlogsNew = (props) => {
+const BlogsEdit = (props) => {
 
   const [formData, setFormData] = useState({
     caption: "",
@@ -15,13 +15,18 @@ const BlogsNew = (props) => {
   const navigate = useNavigate()
   const location = useLocation()
 
-  let { art } = location.state
-
   useEffect(()=>{
-    let { art } = location.state
-    console.log('art links: ', art.artworkLink, art.contentLink, art.styleLink)
-    setFormData({...formData, artworkLink: art?.artworkLink, contentLink: art?.contentLink, styleLink: art?.styleLink})
+  let {blog} = location.state
+  setFormData({...formData, artworkLink: blog.artworkLink, contentLink: blog.contentLink, styleLink: blog.styleLink})    
   },[])
+  let {blog} = location.state
+  console.log(blog)
+
+  // useEffect(()=>{
+  //   let { art } = location.state
+  //   console.log('art links: ', art.artworkLink, art.contentLink, art.styleLink)
+  //   setFormData({...formData, artworkLink: art?.artworkLink, contentLink: art?.contentLink, styleLink: art?.styleLink})
+  // },[])
 
 
   console.log('location: ', location)
@@ -38,26 +43,34 @@ const BlogsNew = (props) => {
   const handleChange = evt => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
     char= (evt.target.value)
+    console.log(formData)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    blogService.createBlog(formData)
+    let blogID = blog.id
+    blogService.update(formData, blogID)
     .then(()=>navigate('/blogs'))
     //const postFormData = new FormData()
     //postFormData.append('caption', formData.caption)
     // postFormData.append('images', formData.artworkLink????)
 
     // formElement.current.value = ''
-    
   }
 
   return (
     <div>
       {/* <h1>Sanity Check New Blog</h1> */}
       <img
-        src = {art?.artworkLink}
+        src = {blog?.contentLink}
+        alt = 'content img'
+      />
+        <img
+        src = {blog?.styleLink}
+        alt = 'style img'
+      />
+        <img
+        src = {blog?.artworkLink}
         alt = 'generated img'
       />
       {/* caption */}
@@ -68,11 +81,11 @@ const BlogsNew = (props) => {
           rows="10"
           maxLength='1000'
           onChange={handleChange} 
-        ></textarea>
-        <button type="submit">SHARE BLOG</button>
+        >{blog?.caption}</textarea>
+        <button type="submit">Edit Caption</button>
       </form>
     </div>
   )
 }
 
-export default BlogsNew
+export default BlogsEdit
