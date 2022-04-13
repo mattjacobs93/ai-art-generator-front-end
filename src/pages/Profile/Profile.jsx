@@ -15,7 +15,7 @@ const Profile = ({user}) => {
 
   return (
     <> 
-            <h1>This is profile page</h1>
+            <h1>This is {user.name}'s profile</h1>
             {
               (profilesArtwork && profilesArtwork.length > 0) ?
               <ProfilesArtworkContainer artwork={profilesArtwork} />
