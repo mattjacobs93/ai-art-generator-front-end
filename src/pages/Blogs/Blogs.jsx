@@ -5,6 +5,8 @@ import { BlogCard } from './BlogCard'
 import BlogModal from './BlogModal'
 import EditAndDelete from './EditAndDelete'
 import styles from './BlogCard.module.css'
+import blogStyle from './Blogs.module.css'
+
 
 const Blogs = ({user}) => {
     const [blogs, setBlogs] = useState()
@@ -33,7 +35,7 @@ const Blogs = ({user}) => {
             blogs ?
             <>
                 {blogs?.map(blog => (
-                    <div className={styles.container}>
+                    <div className={blogStyle.container}>
                         <div className={styles.editDelete}>
                             {user?.id === blog?.profile_id && forceUpdate ? <EditAndDelete blog={blog} forceUpdate={forceUpdate}/> : <div></div>}
                         </div>

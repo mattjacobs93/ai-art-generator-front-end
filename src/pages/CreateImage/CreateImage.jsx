@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as artworkService from '../../services/artworkService.js'
 import { useNavigate } from "react-router-dom";
+import styles from './createImage.module.css'
 
 
 const CreateImage = () => {
@@ -35,12 +36,18 @@ const CreateImage = () => {
 
     return ( 
         <>
-            <h1>Sanity Check</h1>
-            <form>
-                Content Image: <input id="content-image" type="file" onChange={handleChange} /> <br />
-                Style Image: <input id="style-image" type="file" onChange={handleChange} /> <br />
-                <button type="submit" onClick={handleSubmit}>submit</button>
-            </form>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h2>Create Image</h2>
+            </div>
+            <div className={styles.body}>
+                <form>
+                    Content Image: <input id="content-image" type="file" onChange={handleChange} /> <br />
+                    Style Image: <input id="style-image" type="file" onChange={handleChange} /> <br />
+                    <button type="submit" onClick={handleSubmit}>submit</button>
+                </form>
+            </div>
+        </div>
         </>
      );
 }
