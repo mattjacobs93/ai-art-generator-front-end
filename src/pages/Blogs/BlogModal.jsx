@@ -8,27 +8,33 @@ const BlogModal = ({blog, handleClose, show}) => {
     return null
   }
 
-  return ( 
-    <div onClick={handleClose}>
+  return (
+    <div >
       <div className={styles.modal} onClick={evt => evt.stopPropagation()}>
         <div className={styles.modalBody}>
+          
+          <div className={styles.bigImg}>
+            <img
+                src = {blog?.artworkLink}
+                alt = 'generated img'
+            />
+          </div>
+          <div className={styles.smallImg}>
+            <img
+                src = {blog?.contentLink}
+                alt = 'generated img'
+            />
+            <img
+                src = {blog?.styleLink}
+                alt = 'generated img'
+            />
+          </div>
           <button onClick={handleClose}>CLOSE</button>
-          <h1>HELLO</h1>
-          <img
-              src = {blog?.contentLink}
-              alt = 'generated img'
-          />
-          <img
-              src = {blog?.styleLink}
-              alt = 'generated img'
-          />
-          <img
-              src = {blog?.artworkLink}
-              alt = 'generated img'
-          />
-          <h3>caption</h3>
-          <CommentsContainer blog={blog}/>
         </div>
+          <div className={styles.textArea}>
+            <h3>caption</h3>
+            <CommentsContainer blog={blog}/>
+          </div>
       </div>
     </div>
    );
