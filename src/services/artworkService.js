@@ -23,4 +23,17 @@ function create(formDataObj) {
     .then(res => res.json())
   }
 
-  export { create, getProfilesArtwork }
+  function getAllArtwork() {
+    console.log('about to get all artwork')
+    return fetch(`${BASE_URL}`, {
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      },
+    })
+    .then(res => res.json())
+  }
+
+  export { create, 
+  getProfilesArtwork,
+  getAllArtwork
+}

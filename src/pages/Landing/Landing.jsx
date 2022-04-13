@@ -1,4 +1,5 @@
 import styles from './Landing.module.css'
+import * as artworkService from '../../services/artworkService'
 
 const Landing = ({ user }) => {
   return (
