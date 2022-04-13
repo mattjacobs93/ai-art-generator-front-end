@@ -22,8 +22,25 @@ const getAll = async () => {
     }
   }
 
+
+function createComment (comment) {
+  console.log('about to send new comment to backend...comment: ', comment)
+    return fetch(`${BASE_URL}${comment.blog_id}/comment/new/`, {
+      method: 'POST',
+      headers: {
+        // "Access-Control-Allow-Origin":"*",
+        // "mode":"cors",
+        "Content-Type": "application/json",
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      },
+      body: JSON.stringify(comment)
+    })
+    .then(res => res.json())
+  }
+
 export {
     createBlog,
-    getAll
+    getAll,
+    createComment
 }
 
