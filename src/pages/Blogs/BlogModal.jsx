@@ -9,7 +9,7 @@ const BlogModal = ({blog, handleClose, show}) => {
   }
 
   return (
-    <div >
+    <div onClick={handleClose}>
       <div className={styles.modal} onClick={evt => evt.stopPropagation()}>
         <div className={styles.modalBody} >
           
@@ -32,7 +32,8 @@ const BlogModal = ({blog, handleClose, show}) => {
           <button onClick={handleClose}>CLOSE</button>
         </div>
           <div className={styles.textArea}>
-            <h3>caption</h3>
+            <h3>{blog.caption}</h3>
+            <h6>Posted: {blog.date.slice(8, 11)} {blog.date.slice(12, 16)}</h6>
             <CommentsContainer blog={blog}/>
           </div>
       </div>
