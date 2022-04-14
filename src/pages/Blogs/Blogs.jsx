@@ -34,7 +34,7 @@ const Blogs = ({user}) => {
         {
             blogs ?
             <>
-                {blogs?.map(blog => (
+                {[...blogs].sort((blog1, blog2) => new Date(blog2.date) - new Date(blog1.date))?.map(blog => (
                     <div className={blogStyle.container}>
                         <div>
                             {user?.id === blog?.profile_id && forceUpdate ? <EditAndDelete blog={blog} forceUpdate={forceUpdate}/> : <div></div>}
