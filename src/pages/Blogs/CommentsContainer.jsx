@@ -8,6 +8,7 @@ const CommentsContainer = ({blog}) => {
   const [commentFormData, setCommentFormData] = useState()
   const [blogState, setBlogState] = useState(blog)
   const [numComments, setNumComments] = useState()
+  const [sentComments, setSentComments] = useState({})
 
   const commentFormElement = useRef()
   useEffect(()=> {
@@ -18,23 +19,18 @@ const CommentsContainer = ({blog}) => {
   }
   const handleComment = (evt) => {
      evt.preventDefault()
-     createComment({'text': commentFormData, blog_id: blogState.id})
-     .then(newComment => {console.log('returned comment: ', newComment);})//setBlogState(newblogState)})
+     if (!sentComments[commentFormData]) {
+         let newSentComments = {...sentComments}
+         newSentComments[commentFormData] = true
+         setSentComments(newSentComments)
+        createComment({'text': commentFormData, blog_id: blogState.id})
+        .then(() => {
+            let tempBlog = {...blogState}
+            tempBlog.comments.push({'text': commentFormData, blog_id: blogState.id})
+            setBlogState(tempBlog)
+        })
+     }
   }
-
-//   const handleDeletedComment = (deletedCommentID) => {
-//       let tempComments = blogState.comments
-//       try {
-//         tempComments= tempComments.filter(comment => comment._id != deletedCommentID)
-//       }
-  
-//       catch (error) {
-//         console.log(error)
-//       }
-      
-//       let tempblogState = {...blogState, comments: tempComments}
-//       setBlogState(tempblogState)
-//     } 
 
   return (
       <div className={styles.commentContainer}>

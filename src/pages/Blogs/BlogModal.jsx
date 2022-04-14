@@ -35,6 +35,7 @@ const BlogModal = ({blog, handleClose, show}) => {
             <h3>{blog.caption}</h3>
             <h6>Posted: {blog.date.slice(8, 11)} {blog.date.slice(12, 16)}</h6>
             <CommentsContainer blog={blog}/>
+
           </div>
       </div>
     </div>
