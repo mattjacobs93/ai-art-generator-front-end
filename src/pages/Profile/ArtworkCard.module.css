@@ -6,9 +6,19 @@ img{
 
 
 .imagesContainer {
+  justify-content: center;
+  align-items: center;
+  width:600px;
+  background-color: snow;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px grey;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr; */
+  grid-template-columns: 300px 600px ;
+  grid-template-rows:300px 300px ;
   grid-template-areas: 
   "contentImage generatedImage"
   "styleImage generatedImage"

@@ -1,0 +1,8 @@
+.container {
+  margin: auto;
+  width: 600px;
+  background-color: snow;
+  border-top: 3px solid rgb(91, 89, 89);
+  border-bottom: 3px solid rgb(195, 179, 179);
+  border-radius: 10px;
+}

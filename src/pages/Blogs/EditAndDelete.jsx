@@ -15,7 +15,10 @@ const EditAndDelete = ({blog, forceUpdate}) => {
 
   return (
     <div>
-      <Link to='/blogs/edit' state={{blog}}>Edit</Link> <div onClick={handleDelete}>Delete</div>
+      <Link to='/blogs/edit' state={{blog}}>Edit</Link> 
+      <div 
+      onClick={handleDelete}>Delete
+      </div>
     </div>
   )
 }

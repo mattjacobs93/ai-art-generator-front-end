@@ -1,5 +1,27 @@
-.container {
-  display: flex;
+/* .container {
+  display: flex; 
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  min-height: 100vh;
+  height: 300px;
   align-items: center;
   flex-direction: column;
+  border: 5px solid snow;
+  margin-bottom: 1rem;
+}  */
+.container{
+  height: 98vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: snow;
+  margin-bottom: 1rem;
+  
 }
+
+

@@ -19,7 +19,7 @@ const App = () => {
   const handleLogout = () => {
     authService.logout()
     setUser(null)
-    navigate('/')
+    navigate('/login')
   }
 
   const handleSignupOrLogin = () => {
