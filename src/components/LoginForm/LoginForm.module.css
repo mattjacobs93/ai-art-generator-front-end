@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -21,4 +21,89 @@ button {
 
 span{
   font-weight: bolder;
+} */
+
+.container {
+  /* log in form */
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 70px;
+}
+
+.label,
+.button {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  
+}
+
+.inside {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.inputContainer {
+ font-family: sans-serif;
+ border: none;
+ appearance: none;
+ background-color: inherit;
+} 
+
+input {
+  border: none;
+  font-size: 20px;
+  appearance: none;
+  background-color: inherit;
+  margin-top: 15px;
+  padding: 12px;
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+input::placeholder {
+  color: black;
+  transition: color 0.3s ease; 
+}
+
+.button {
+  background-color: dodgerblue;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.buttonContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+  
+}
+
+span{
+  font-weight: bolder;
+}
+
+.signup {
+  padding-top: 30px;
+
 }
