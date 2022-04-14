@@ -15,17 +15,17 @@ const NavBar = ({ user, handleLogout }) => {
               <li><Link to="/createimage">Create Ai Art</Link></li>
               <li><Link to="/blogs">Blogs</Link></li>
               <li><Link to="/profile">My Art</Link></li>
-              <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
+              <li><Link to="/Login" onClick={handleLogout}>LOG OUT</Link></li>
             </div>
             
           </ul>
         </nav>
       :
         <nav>
-          <ul>
+          {/* <ul>
             <li><Link to="/login">Log In</Link></li>
             <li><Link to="/signup">Sign Up</Link></li>
-          </ul>
+          </ul> */}
         </nav>
       }
     </>

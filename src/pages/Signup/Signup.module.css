@@ -1,5 +1,10 @@
 .container {
+  height: 98vh;
+  margin: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  background-color: snow;
+  margin-bottom: 1rem;
 }

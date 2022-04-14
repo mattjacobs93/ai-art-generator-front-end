@@ -3,14 +3,22 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 0 auto;
 }
 
 .label,
 .button {
   margin-right: 0.5rem;
+
 }
 
-.inputContainer {
-  margin-bottom: 1rem;
+button {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+span{
+  font-weight: bolder;
 }
