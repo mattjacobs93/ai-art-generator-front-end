@@ -11,16 +11,17 @@ const CreateImage = () => {
     const [imgFile, uploadImg] = useState("")
     const [imgFile2, uploadImg2] = useState("")
 
-    const handleChange = (e) => {
-       setFormData({...formData, [e.target.id] : e.target.files[0]})
+    const handleChange1 = (e) => {
+        setFormData({...formData, [e.target.id] : e.target.files[0]})
+        uploadImg(URL.createObjectURL(e.target.files[0]))
+     }
+ 
 
-       console.log(e.target.files)
-       let img1 = URL.createObjectURL(e.target.files[0])
-       console.log(img1)
-       let img2 = URL.createObjectURL(e.target.files[1])
-       uploadImg({...img1}['blob'])
-       uploadImg2({...img2}['blob'])
-    }
+    const handleChange2 = (e) => {
+        setFormData({...formData, [e.target.id] : e.target.files[0]})
+        uploadImg2(URL.createObjectURL(e.target.files[0]))
+     }
+
 
     useEffect(()=>{
     },[formData])
@@ -60,7 +61,7 @@ const CreateImage = () => {
                         <input 
                             id="content-image" 
                             type="file" 
-                            onChange={handleChange} 
+                            onChange={handleChange1} 
                             accept="image/png"
                         /> <br />
                            <div className={styles.contentImage}>
@@ -80,7 +81,7 @@ const CreateImage = () => {
                          <input 
                             id="style-image" 
                             type="file" 
-                            onChange={handleChange} 
+                            onChange={handleChange2} 
                         /> <br />
                     <div className={styles.styleImage}>
                         <div className={styles.stylePreview}>
