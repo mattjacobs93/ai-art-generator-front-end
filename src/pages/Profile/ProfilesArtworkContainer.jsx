@@ -1,23 +1,20 @@
 import { ArtworkCard } from "./ArtworkCard"
+import styles from './ProfilesArtworkContainer.module.css'
 
 function ProfilesArtworkContainer ({artwork}) {
 
   return (
-    <div>
-      <ul>
+    <div className={styles.ArtworkCard}>
       {
         
         artwork.map(art => (
-          <li>
             <ArtworkCard 
               art={art} 
               key={art.id}
             />
-          </li>
         ))
        
       }
-       </ul>
     </div>
   )
 }
