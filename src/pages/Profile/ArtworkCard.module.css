@@ -1,32 +1,32 @@
 /* Place holder for image sizes for now */
-img{
+img {
     width:300px;
     height:300px;
 }
 
 
+
+
 .imagesContainer {
-  justify-content: center;
-  align-items: center;
-  width:600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 300px ;
+  grid-template-areas: 
+  "generatedImage generatedImage"
+  "contentImage styleImage"
+  ;
+  width: 600px;
   background-color: snow;
   margin-bottom: 1rem;
   text-decoration: none;
   border-radius: 2px;
   box-shadow: 0px 0px 4px grey;
-  display: grid;
-  /* grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr; */
-  grid-template-columns: 300px 600px ;
-  grid-template-rows:300px 300px ;
-  grid-template-areas: 
-  "contentImage generatedImage"
-  "styleImage generatedImage"
-  ;
 }
 
 .contentImage {
   grid-area: contentImage;
+  height: 100%;
+  width: 100%;
 }
 
 .generatedImage{
@@ -38,6 +38,6 @@ img{
 }
 
 .generatedImage img {
-  height: 600px;
-  width: 600px;
+  height: 100%;
+  width: 100%;
 }

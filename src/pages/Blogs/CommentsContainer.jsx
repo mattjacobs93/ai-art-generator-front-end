@@ -36,14 +36,14 @@ const CommentsContainer = ({blog}) => {
       <div className={styles.commentContainer}>
           <div className={styles.comment}>
               <form ref={commentFormElement} onSubmit={handleComment}>
-                  <textarea onChange={handleCommentFormChange} name="comment" cols="40" rows="1" placeholder='   Add a comment...'></textarea>
+                  <textarea onChange={handleCommentFormChange} name="comment" cols="40" rows="2" placeholder=' Add a comment...'></textarea>
                   <button className={styles.commentButton}type="submit">Comment</button>
               </form>
           </div>
           <div className={styles.commentSection}>
           {
               blogState.comments?.map(comment => (
-                <div>{comment?.profile_id} Post: {comment.text}</div>
+                <div>{blog?.profile_id}: {comment.text}</div>
                   // <CommentCard 
                   //     comment={comment} 
                   //     postID={post._id} 
