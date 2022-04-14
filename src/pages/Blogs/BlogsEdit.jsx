@@ -13,6 +13,8 @@ const BlogsEdit = (props) => {
     styleLink: "" 
   })
 
+  const [alreadySubmitted, setAlreadySubmitted] = useState(false)
+
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -49,9 +51,14 @@ const BlogsEdit = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    let blogID = blog.id
-    blogService.update(formData, blogID)
-    .then(()=>navigate('/blogs'))
+
+    if (!alreadySubmitted) {
+      setAlreadySubmitted(true)
+      let blogID = blog.id
+      blogService.update(formData, blogID)
+      .then(()=>navigate('/blogs'))
+    }
+
     //const postFormData = new FormData()
     //postFormData.append('caption', formData.caption)
     // postFormData.append('images', formData.artworkLink????)
