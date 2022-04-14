@@ -12,7 +12,7 @@
 
 🖌️  Ai art generator is a Flask/Python backend and React frontend application where users can utilize the power of artifical intelligence to style content images.
 
-This application utilizes an arbitrary image stylization from the Magenta OpenSource project. The project utilizes a machine learning system for performing fast artistic style transfer that works on arbitrary painting styles. Read more about the project [here](https://github.com/magenta/magenta/tree/main/magenta/models/arbitrary_image_stylization)
+This application utilizes an arbitrary image stylization algorithm from the Magenta OpenSource project. The project utilizes a machine learning system for performing fast artistic style transfer that works on arbitrary painting styles. Read more about the project [here](https://github.com/magenta/magenta/tree/main/magenta/models/arbitrary_image_stylization)
 
 Check out our [Backend Repo](https://github.com/Euril/ai-art-generator-api) for more information on how we utilize TensorFlow to for image stylization.<br>
 <hr/>
