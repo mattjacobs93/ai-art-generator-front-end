@@ -33,7 +33,7 @@ form {
 }
 
 .imagesContainer {
-  display: flex;
+  display: grid;
   flex-direction: row;
   
 }
@@ -44,16 +44,40 @@ form {
 }
 
 .contentImage {
+  width: 300px;
+  min-height: 100px;
+  border: 2px solid #dddddd;
+  margin-top: 15px;
+  
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  font-weight: bold;
+  color: #dddddd;
+}
+
+.contentPreviewImage {
+  /* display: none; */
+  width: 100%;
 }
 
 
 .styleImage{
+  width: 300px;
+  min-height: 100px;
+  border: 2px solid #dddddd;
+  margin-top: 15px;
+  
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  font-weight: bold;
+  color: #dddddd;
+}
+
+.stylePreviewImage {
+  /* display: none; */
+  width: 100%;
 }
 
 
