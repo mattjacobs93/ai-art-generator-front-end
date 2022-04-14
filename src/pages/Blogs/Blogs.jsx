@@ -36,7 +36,7 @@ const Blogs = ({user}) => {
             <>
                 {blogs?.map(blog => (
                     <div className={blogStyle.container}>
-                        <div className={styles.editDelete}>
+                        <div>
                             {user?.id === blog?.profile_id && forceUpdate ? <EditAndDelete blog={blog} forceUpdate={forceUpdate}/> : <div></div>}
                         </div>
                         <div onClick={() => {
