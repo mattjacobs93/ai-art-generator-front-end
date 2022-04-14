@@ -11,7 +11,7 @@ const LoginForm = props => {
   const navigate = useNavigate()
 
   const handleChange = e => {
-    props.updateMessage('')
+    // props.updateMessage('')
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 

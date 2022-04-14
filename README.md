@@ -1,13 +1,28 @@
 # ***AI art generator*** 
 
-<!-- Deployed area -->
-
-This is our [Backend Repo](https://github.com/Euril/ai-art-generator-api) <br>
-
-<!-- we can add images of some pages here -->
-
 ### *Matt Jacobs, Anthony Madia, Eugene Rillo* <br>
 <hr/>
+
+<!-- Deployed area -->
+### Deployment Link
+
+<hr/>
+
+## Description
+
+🖌️  Ai art generator is a Flask/Python backend and React frontend application where users can utilize the power of artifical intelligence to style content images.
+
+This application utilizes an arbitray image stylization from the Magenta OpenSource project. The project utilizes a machine learning system for performing fast artistic style transfer that works on arbitrary painting styles. Read more about the project [here](https://github.com/magenta/magenta/tree/main/magenta/models/arbitrary_image_stylization)
+
+Check out our [Backend Repo](https://github.com/Euril/ai-art-generator-api) for more information on how we utilitize TensorFlow to for image stylization.<br>
+<hr/>
+
+<!-- we can add images of some pages here -->
+## Preview
+🤖 This page demonstrates where users will be able to choose a Content Image and a Style Image. After clicking 'Submit', the backend receives a request and the image styling is initiated.
+![createimage](./public/createimage.png)
+
+
 
 ## App Info
 
@@ -20,9 +35,18 @@ This is our [Backend Repo](https://github.com/Euril/ai-art-generator-api) <br>
 
 | ***Cloudinary*** |
 
+
+
 ## Planning 
 Planning through Trello
 [https://trello.com/b/YFyGjZMB/ai-nft-art-generator]
+
+
+## Ice Box / Stretch Goals
+
+- [ ] Add a selection of style images a user can choose from
+
+<hr/>
 
 ## Credits
 
@@ -32,74 +56,6 @@ Cloudinary <br>
 Fast Style Transfer for Arbitrary Styles <br>
 [https://www.tensorflow.org/hub/tutorials/tf2_arbitrary_image_stylization]
 
-## Ice Box / Stretch Goals
 
-<!-- # Flask - React JWT Auth Template - Front End
 
-This is the front end of a decoupled Flask React app that includes JWT Authentication.
-
-When combined with the back end found [here](https://github.com/SEI-Remote/flask-api-auth-template), you'll have all you need to build a full stack Flask React app!
-
-Use this to go build things! 🚀
-
-## To Use This Template
-
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
-
-```bash
-git clone https://github.com/SEI-Remote/flask-react-jwt-auth-template-frontend.git <name-of-your-app-here>-front-end
-cd <name-of-your-app-here>-front-end
-```
-
-Once you are in the project directory:
-
-```bash
-rm -rf .git
-```
-
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
-
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
-
-Re-initialize a git repository:
-
-```bash
-git init
-```
-
-Use the GitHub CLI to create a new project repository on GitHub:
-
-```bash
-gh repo create <name-of-your-app-here>-front-end
-```
-
-Run `npm i` to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a `.env` file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-REACT_APP_API_URL=http://127.0.0.1:5000
-```
-
-> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done! -->
 
