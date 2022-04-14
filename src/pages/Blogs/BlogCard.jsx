@@ -10,9 +10,6 @@ function BlogCard ({blog, user}) {
   // }
 
 
-  
-
-
   console.log(blog, user)
   return (
     <div>

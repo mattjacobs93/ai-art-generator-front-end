@@ -11,7 +11,7 @@ const BlogModal = ({blog, handleClose, show}) => {
   return (
     <div >
       <div className={styles.modal} onClick={evt => evt.stopPropagation()}>
-        <div className={styles.modalBody}>
+        <div className={styles.modalBody} >
           
           <div className={styles.bigImg}>
             <img
