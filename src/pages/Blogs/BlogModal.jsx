@@ -1,17 +1,8 @@
 import styles from './Modal.module.css'
 import CommentsContainer from './CommentsContainer';
-import { useState, useEffect } from 'react';
 
 
 const BlogModal = ({blog, handleClose, show}) => {
-  
-  const [commentsState, setCommentsState] = useState({...blog?.comments})
-
-
-
-  useEffect(()=>{
-    console.log('our comments: ', commentsState)
-  },[])
 
   if(!show){
     return null
