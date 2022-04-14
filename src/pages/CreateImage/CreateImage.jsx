@@ -8,8 +8,10 @@ const CreateImage = () => {
     const [formData, setFormData] = useState({})
     const navigate = useNavigate()
 
-    const [imgFile, uploadImg] = useState("")
-    const [imgFile2, uploadImg2] = useState("")
+    const [imgFile, uploadImg] = useState(null)
+    const [imgFile2, uploadImg2] = useState(null)
+
+    const [alreadySubmitted, setAlreadySubmitted] = useState(false)
 
     const handleChange1 = (e) => {
         setFormData({...formData, [e.target.id] : e.target.files[0]})
@@ -37,10 +39,12 @@ const CreateImage = () => {
             console.log('my entry: ', entries)
         }
 
-        let returnedFromCreate = await artworkService.create(toSend)
-        console.log(returnedFromCreate)
-        navigate('/profile')
-
+        if (!alreadySubmitted && imgFile && imgFile2) {
+            setAlreadySubmitted(true)
+            let returnedFromCreate = await artworkService.create(toSend)
+            console.log(returnedFromCreate)
+            navigate('/profile')
+        }
     }
 
     return ( 
