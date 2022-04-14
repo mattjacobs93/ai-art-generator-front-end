@@ -1,18 +1,62 @@
+.recursiveContainer {
+  min-height: 80vh;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   border: none;
   border-radius: 4px;
   margin: auto;
+  /* min-height: 100vh; */
   padding: 10px 60px 40px 60px;
-  background-color: inherit;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 4px grey;
-  width:50%;
+  width: 1fr;
+  height: 1fr;
 }
+
+h2 {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+
+.imagesContainer {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.imagesContainer > h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contentImage {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.styleImage{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
 .header{
   padding:0px;
 }
@@ -38,7 +82,7 @@ input[type=file]::file-selector-button {
 
 button {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: bold rgb(30, 94, 255);
   background-color: dodgerblue;
   color: white;
   border: none;
