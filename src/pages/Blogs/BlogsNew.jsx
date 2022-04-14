@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom"
 import { useRef, useState, useEffect } from 'react'
 // import { createBlog } from "../../services/blogService"
 import * as blogService from "../../services/blogService"
+import blogStyle from './Blogs.module.css'
 
 const BlogsNew = (props) => {
 
@@ -54,23 +55,58 @@ const BlogsNew = (props) => {
   }
 
   return (
-    <div>
-      {/* <h1>Sanity Check New Blog</h1> */}
-      <img
-        src = {art?.artworkLink}
-        alt = 'generated img'
-      />
-      {/* caption */}
-      <form action="" ref={formElement} onSubmit={handleSubmit} method="POST">
-        <textarea 
-          name="caption" 
-          cols="30" 
-          rows="10"
-          maxLength='1000'
-          onChange={handleChange} 
-        ></textarea>
-        <button type="submit">SHARE BLOG</button>
-      </form>
+    // <div>
+      
+    //   <img
+    //     src = {art?.artworkLink}
+    //     alt = 'generated img'
+    //   />
+    //   {/* caption */}
+    //   <form action="" ref={formElement} onSubmit={handleSubmit} method="POST" >
+    //     <textarea 
+    //       name="caption" 
+    //       cols="30" 
+    //       rows="10"
+    //       maxLength='1000'
+    //       placeholder=" Write a caption..."
+    //       onChange={handleChange} 
+    //     ></textarea>
+    //     <button type="submit">SHARE BLOG</button>
+    //   </form>
+    // </div>
+    <div className={blogStyle.container}>
+      <div className={blogStyle.imgContainer}>
+        <div className={blogStyle.artwork}>
+          <img
+          src = {art?.artworkLink}
+          alt = 'generated img'
+        />
+        </div>
+        <div className={blogStyle.contentStyle}>
+          <img
+            src = {art?.contentLink}
+            alt = 'content img'
+
+          />
+            <img
+            src = {art?.styleLink}
+            alt = 'style img'
+          />
+        </div>
+      </div>
+      <div className={blogStyle.textArea}>
+        <form action="" ref={formElement} onSubmit={handleSubmit} method="POST" >
+          <textarea 
+            name="caption" 
+            cols="30" 
+            rows="10"
+            maxLength='1000'
+            placeholder=" Write a caption..."
+            onChange={handleChange} 
+          ></textarea>
+          <button type="submit">SHARE BLOG</button>
+        </form>
+      </div>
     </div>
   )
 }

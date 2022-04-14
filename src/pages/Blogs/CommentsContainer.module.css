@@ -31,10 +31,13 @@
 
 
 .commentSection{
-  /* height:400px;
-  width:400px; */
+  height:360px;
+  width:380px;
   max-width:100%;
   max-height:100%;
   overflow-wrap:break-word;
-  overflow-y: auto;
+  overflow-y:auto;
+  border:1px solid black;
+  border-radius:5px;
+  
 }

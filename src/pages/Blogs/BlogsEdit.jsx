@@ -69,6 +69,12 @@ const BlogsEdit = (props) => {
   return (
     <div className={blogStyle.container}>
       <div className={blogStyle.imgContainer}>
+        <div className={blogStyle.artwork}>
+          <img
+          src = {blog?.artworkLink}
+          alt = 'generated img'
+        />
+        </div>
         <div className={blogStyle.contentStyle}>
           <img
             src = {blog?.contentLink}
@@ -79,12 +85,6 @@ const BlogsEdit = (props) => {
             src = {blog?.styleLink}
             alt = 'style img'
           />
-        </div>
-        <div className={blogStyle.artwork}>
-          <img
-          src = {blog?.artworkLink}
-          alt = 'generated img'
-        />
         </div>
       </div>
       <div className={blogStyle.textArea}>
