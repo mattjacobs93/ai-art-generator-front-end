@@ -1,19 +1,19 @@
 .commentCard {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   align-items: center;
   text-align: left;
-  padding-right: 20px;
-  max-width: 750px;
+  /* padding-right: 20px; */
+  max-width: 100%;
 }
 
-.author {
+/* .author {
   margin-top: 17px;
   justify-content: center;
   align-items: left;
   display: flex;
-}
+} */
 
 .comment {
   flex-direction: column;
@@ -21,10 +21,20 @@
   overflow-wrap: break-word;
 }
 
-.text {
+/* .text {
   font-weight: normal;
-}
+} */
 
 .delete {
   cursor: pointer;
+}
+
+
+.commentSection{
+  /* height:400px;
+  width:400px; */
+  max-width:100%;
+  max-height:100%;
+  overflow-wrap:break-word;
+  overflow-y: auto;
 }
