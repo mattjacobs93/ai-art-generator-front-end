@@ -6,13 +6,18 @@ import styles from './Profile.module.css'
 
 const Profile = ({user}) => {
   const [profilesArtwork, setProfilesArtwork] = useState()
+  const [updateState, setUpdateState] = useState({"state":"state"})
+
+  const forceUpdate = () => {
+    setUpdateState({...updateState})
+  }
 
 
   useEffect(()=>{
     console.log(user)
     artworkService.getProfilesArtwork(user.id)
     .then(artwork=>setProfilesArtwork(artwork))
-  },[user])
+  },[user, updateState])
 
   return (
     <> 
@@ -23,7 +28,7 @@ const Profile = ({user}) => {
 
             {
               (profilesArtwork && profilesArtwork.length > 0) ?
-              <ProfilesArtworkContainer artwork={profilesArtwork} />
+              <ProfilesArtworkContainer artwork={profilesArtwork} forceUpdate={forceUpdate} />
               :
             
               <h2>Create AI Art!</h2>
