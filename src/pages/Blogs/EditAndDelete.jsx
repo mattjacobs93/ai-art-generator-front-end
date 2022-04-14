@@ -1,6 +1,7 @@
 import * as blogService from '../../services/blogService'
 import { Link } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
+import styles from './BlogCard.module.css'
 
 const EditAndDelete = ({blog, forceUpdate}) => {
   const navigate = useNavigate()
@@ -14,11 +15,12 @@ const EditAndDelete = ({blog, forceUpdate}) => {
   }
 
   return (
-    <div>
+    <div className={styles.editDeleteContainer}>
       <Link to='/blogs/edit' state={{blog}}>Edit</Link> 
-      <div 
-      onClick={handleDelete}>Delete
-      </div>
+      {/* <button className={styles.deleteButton} onClick={handleDelete}>DELETE</button> */}
+      <h3 className={styles.deleteButton} onClick={handleDelete}>DELETE</h3> 
+        
+      
     </div>
   )
 }
