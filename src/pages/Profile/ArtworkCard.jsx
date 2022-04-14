@@ -6,7 +6,7 @@ function ArtworkCard ({art}) {
     console.log('make blog button clicked')
   }
   return (
-    <div>
+    <div className={styles.ArtworkCard}>
         <div className={styles.imagesContainer}>
           <div className={styles.contentImage}>
             <img
@@ -28,7 +28,11 @@ function ArtworkCard ({art}) {
           </div>
         </div>
         <div className={styles.blogLinkDiv}>
-          <Link to='/blogs/new' state={{art}}>Make a Blog Post about this Artwork</Link>
+          <Link 
+            to='/blogs/new' 
+            state={{art}}>
+              Share This With Others!
+            </Link>
         </div>
     </div>
   )
