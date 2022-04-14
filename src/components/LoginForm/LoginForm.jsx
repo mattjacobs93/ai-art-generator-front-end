@@ -59,12 +59,9 @@ const LoginForm = props => {
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.button}>Log In</button>
-        {/* <Link to="/SignUp">
-          <button>SIGN UP</button>
-        </Link> */}
       </div>
     </form>
-      <div>Don't have an account? <Link to='/signup'> <span>Sign up here </span></Link>
+      <div>Don't have an account? <Link to='/signup'> <span>Sign up here</span></Link>
       </div>
     </div>
   )
