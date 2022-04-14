@@ -46,4 +46,49 @@ img {
 }
 
 .share {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
 }
+
+.share button{
+  font-size: 22px;
+  font-weight: 30px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.share button:hover{
+  background-position: right center; /* change the direction of the change here */
+   color: white;
+   text-decoration: none;
+}
+
+
+
+.btngrad {background-image: linear-gradient(to right, #B993D6 0%, #8CA6DB  51%, #B993D6  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btngrad:hover{
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+

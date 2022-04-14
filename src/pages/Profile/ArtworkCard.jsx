@@ -26,13 +26,16 @@ function ArtworkCard ({art}) {
               alt = 'generated img'
               />
           </div>
+        </div>
         <div className={styles.share}>
+
           <Link 
             to='/blogs/new' 
             state={{art}}>
-              Share This With Others!
+          <button className={styles.btngrad}>
+              Share Artwork
+          </button>
             </Link>
-        </div>
         </div>
     </div>
   )
