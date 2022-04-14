@@ -16,9 +16,9 @@ const EditAndDelete = ({blog, forceUpdate}) => {
 
   return (
     <div className={styles.editDeleteContainer}>
-      <Link to='/blogs/edit' state={{blog}}>Edit</Link> 
+      <Link to='/blogs/edit' state={{blog}}><i class="fa-solid fa-wrench"></i></Link> 
       {/* <button className={styles.deleteButton} onClick={handleDelete}>DELETE</button> */}
-      <h3 className={styles.deleteButton} onClick={handleDelete}>DELETE</h3> 
+      <h3 className={styles.deleteButton} onClick={handleDelete}><i class="fa-solid fa-trash-can"></i></h3> 
         
       
     </div>

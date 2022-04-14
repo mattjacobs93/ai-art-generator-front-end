@@ -75,7 +75,7 @@ const CreateImage = () => {
                                 id="content-image" 
                                 type="file" 
                                 onChange={handleChange1} 
-                                accept="image/png"
+                                accept="image/*"
                             /> <br />
                             <div className={styles.contentImage}>
                             <div className={styles.contentPreview}>
@@ -95,6 +95,7 @@ const CreateImage = () => {
                                 id="style-image" 
                                 type="file" 
                                 onChange={handleChange2} 
+                                accept="image/*"
                             /> <br />
                         <div className={styles.styleImage}>
                             <div className={styles.stylePreview}>
