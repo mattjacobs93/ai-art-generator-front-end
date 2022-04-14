@@ -1,12 +1,22 @@
 import styles from './ArtworkCard.module.css'
 import { Link } from 'react-router-dom'
+import * as artworkService from '../../services/artworkService'
 
-function ArtworkCard ({art}) {
+function ArtworkCard ({art, forceUpdate}) {
   const handleClick = () => {
     console.log('make blog button clicked')
   }
+
+
+  const handleDeleteArt = () => {
+    console.log('delete')
+    artworkService.delete(art.id)
+    .then(()=>forceUpdate())
+  }
+  
   return (
     <div className={styles.ArtworkCard}>
+        
         <div className={styles.imagesContainer}>
           <div className={styles.contentImage}>
             <img
@@ -36,6 +46,9 @@ function ArtworkCard ({art}) {
               Share Artwork
           </button>
             </Link>
+          <button className={styles.btngrad} onClick={handleDeleteArt}>
+            DELETE
+          </button>
         </div>
     </div>
   )

@@ -12,6 +12,7 @@ const BlogModal = ({blog, handleClose, show}) => {
     <div onClick={handleClose}>
       <div className={styles.modal} onClick={evt => evt.stopPropagation()}>
         <div className={styles.modalBody} >
+      
           
           <div className={styles.bigImg}>
             <img
@@ -29,7 +30,7 @@ const BlogModal = ({blog, handleClose, show}) => {
                 alt = 'generated img'
             />
           </div>
-          <button onClick={handleClose}>CLOSE</button>
+          <button onClick={handleClose}>CLOSE</button>          
         </div>
           <div className={styles.textArea}>
             <h3>{blog.caption}</h3>
@@ -37,8 +38,11 @@ const BlogModal = ({blog, handleClose, show}) => {
             <CommentsContainer blog={blog}/>
 
           </div>
+          
       </div>
+      
     </div>
+    
    );
 }
 
