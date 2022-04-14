@@ -36,17 +36,31 @@ const CreateImage = () => {
 
     return ( 
         <>
+        <div className={styles.recursiveContainer}>
+
         <div className={styles.container}>
             <div className={styles.header}>
-                <h2>Create Image</h2>
+                <h2>Utilize the power of artificial intelligence...</h2>
             </div>
             <div className={styles.body}>
                 <form>
-                    Content Image: <input id="content-image" type="file" onChange={handleChange} /> <br />
-                    Style Image: <input id="style-image" type="file" onChange={handleChange} /> <br />
+                    <div className={styles.imagesContainer}>
+                       <div className={styles.contentImage}>
+                           <h3>
+                               Content Image: 
+                           </h3>
+                        <input id="content-image" type="file" onChange={handleChange} /> <br />
+                    </div>
+                    <div className={styles.styleImage}>
+                         <h3>Style Image:</h3> <input id="style-image" type="file" onChange={handleChange} /> <br />
+                    </div> 
+                    </div>
+                    
                     <button type="submit" onClick={handleSubmit}>submit</button>
+                    
                 </form>
             </div>
+        </div>
         </div>
         </>
      );

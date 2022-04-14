@@ -13,13 +13,9 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
             <div className={styles.rightnav}>
               <li><Link to="/createimage">Create Ai Art</Link></li>
-              <li><Link to="/blogs">Blogs</Link></li>
+              <li><Link to="/blogs">Explore</Link></li>
               <li><Link to="/profile">My Art</Link></li>
-<<<<<<< HEAD
-              <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-=======
-              <li><Link to="/Login" onClick={handleLogout}>LOG OUT</Link></li>
->>>>>>> 8a6a8c355a016693507236750e557d322a67f4b0
+              <li><Link to="/Login" onClick={handleLogout}><i class="fa-solid fa-arrow-right-from-bracket"></i></Link></li>
             </div>
             
           </ul>
