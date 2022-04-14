@@ -28,42 +28,56 @@ const LoginForm = props => {
 
   return (
     <div className={styles.container}>
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.form}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-          placeholder="Email"
-        />
+      <div className={styles.inside}>
+
+      <h1>Welcome</h1>
+      <form
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        className={styles.form}
+      >
+        <div className={styles.inputContainer}>
+          <label htmlFor="email" className={styles.label}></label>
+          <input
+            type="text"
+            autoComplete="off"
+            id="email"
+            value={formData.email}
+            name="email"
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="password" className={styles.label}></label>
+          <input
+            type="password"
+            autoComplete="off"
+            id="password"
+            value={formData.password}
+            name="password"
+            onChange={handleChange}
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div className={styles.buttonContainer}>
+          <button 
+            className={styles.button}>
+              Log In
+            </button>
+        </div>
+      </form>
+        <div className={styles.signup}>
+          Don't have an account? <br />
+          <Link to='/signup'> 
+          <br />
+            <span>Sign up here</span>
+          </Link>
+        </div>
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.password}
-          name="password"
-          onChange={handleChange}
-          placeholder="Password"
-        />
       </div>
-      <div className={styles.buttonContainer}>
-        <button className={styles.button}>Log In</button>
-      </div>
-    </form>
-      <div>Don't have an account? <Link to='/signup'> <span>Sign up here</span></Link>
-      </div>
-    </div>
   )
 }
 
