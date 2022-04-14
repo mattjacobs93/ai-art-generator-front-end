@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom"
 import { useRef, useState, useEffect } from 'react'
 // import { createBlog } from "../../services/blogService"
 import * as blogService from "../../services/blogService"
+import blogStyle from './Blogs.module.css'
 
 const BlogsEdit = (props) => {
 
@@ -59,31 +60,38 @@ const BlogsEdit = (props) => {
   }
 
   return (
-    <div>
-      {/* <h1>Sanity Check New Blog</h1> */}
-      <img
-        src = {blog?.contentLink}
-        alt = 'content img'
-      />
-        <img
-        src = {blog?.styleLink}
-        alt = 'style img'
-      />
-        <img
-        src = {blog?.artworkLink}
-        alt = 'generated img'
-      />
-      {/* caption */}
-      <form action="" ref={formElement} onSubmit={handleSubmit} method="POST">
-        <textarea 
-          name="caption" 
-          cols="30" 
-          rows="10"
-          maxLength='1000'
-          onChange={handleChange} 
-        >{blog?.caption}</textarea>
-        <button type="submit">Edit Caption</button>
-      </form>
+    <div className={blogStyle.container}>
+      <div className={blogStyle.imgContainer}>
+        <div className={blogStyle.contentStyle}>
+          <img
+            src = {blog?.contentLink}
+            alt = 'content img'
+
+          />
+            <img
+            src = {blog?.styleLink}
+            alt = 'style img'
+          />
+        </div>
+        <div className={blogStyle.artwork}>
+          <img
+          src = {blog?.artworkLink}
+          alt = 'generated img'
+        />
+        </div>
+      </div>
+      <div className={blogStyle.textArea}>
+        <form action="" ref={formElement} onSubmit={handleSubmit} method="POST">
+          <textarea 
+            name="caption" 
+            cols="30" 
+            rows="10"
+            maxLength='1000'
+            onChange={handleChange} 
+          >{blog?.caption}</textarea>
+          <button type="submit">Edit Caption</button>
+        </form>
+      </div>
     </div>
   )
 }
