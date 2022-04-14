@@ -15,7 +15,7 @@ const Profile = ({user}) => {
 
   return (
     <> 
-            <h1>{user.name}'s AI Generated Artwork</h1>
+            <h1>My AI-Generated Artwork</h1>
             {
               (profilesArtwork && profilesArtwork.length > 0) ?
               <ProfilesArtworkContainer artwork={profilesArtwork} />
