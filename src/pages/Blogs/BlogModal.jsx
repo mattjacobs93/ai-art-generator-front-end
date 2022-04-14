@@ -1,8 +1,17 @@
 import styles from './Modal.module.css'
 import CommentsContainer from './CommentsContainer';
+import { useState, useEffect } from 'react';
 
 
 const BlogModal = ({blog, handleClose, show}) => {
+  
+  const [commentsState, setCommentsState] = useState({...blog?.comments})
+
+
+
+  useEffect(()=>{
+    console.log('our comments: ', commentsState)
+  },[])
 
   if(!show){
     return null
@@ -33,7 +42,7 @@ const BlogModal = ({blog, handleClose, show}) => {
         </div>
           <div className={styles.textArea}>
             <h3>caption</h3>
-            <CommentsContainer blog={blog}/>
+            <CommentsContainer blog={blog} />
           </div>
       </div>
     </div>
