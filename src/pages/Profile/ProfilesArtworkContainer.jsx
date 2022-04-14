@@ -7,7 +7,7 @@ function ProfilesArtworkContainer ({artwork}) {
     <div className={styles.ArtworkCard}>
       {
         
-        artwork.map(art => (
+        [...artwork].sort((a1, a2)=>  a2.id - a1.id).map(art => (
             <ArtworkCard 
               art={art} 
               key={art.id}
