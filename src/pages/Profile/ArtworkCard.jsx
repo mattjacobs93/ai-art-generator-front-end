@@ -43,7 +43,7 @@ function ArtworkCard ({art, forceUpdate}) {
             to='/blogs/new' 
             state={{art}}>
           <button className={styles.btngrad}>
-              Share Artwork
+              SHARE
           </button>
             </Link>
           <button className={styles.btngrad} onClick={handleDeleteArt}>
