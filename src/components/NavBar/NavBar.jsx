@@ -1,11 +1,22 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams, useLocation } from 'react-router-dom'
 import styles from './NavBar.module.css'
+import { useEffect } from 'react'
 
 
 const NavBar = ({ user, handleLogout }) => {
+
+  const location = useLocation()
+
+  // useEffect(()=>{
+    
+  //   console.log('path: ', location.pathname)
+  // },[])
+
+
+
   return (
     <>
-      {user ?
+      {user && !location?.pathname.toLowerCase().includes('login')  && !location?.pathname.toLowerCase().includes('signup')?
         <nav className={styles.nav}>
           <ul className={styles.container}>
             <div className={styles.leftnav}>
