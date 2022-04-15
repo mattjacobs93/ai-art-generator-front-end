@@ -43,7 +43,7 @@ const CommentsContainer = ({blog}) => {
           <div className={styles.commentSection}>
           {
               blogState.comments?.map(comment => (
-                <div>{blog?.profile_id}: {comment.text}</div>
+                <div>{comment.text}</div>
                   // <CommentCard 
                   //     comment={comment} 
                   //     postID={post._id} 
