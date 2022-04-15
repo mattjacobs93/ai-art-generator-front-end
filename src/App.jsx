@@ -9,6 +9,7 @@ import Blogs from './pages/Blogs/Blogs'
 import BlogsNew from './pages/Blogs/BlogsNew'
 import BlogsEdit from './pages/Blogs/BlogsEdit'
 import * as authService from './services/authService'
+import Base from './pages/Base/Base'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -29,6 +30,10 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+      <Route
+          path="/"
+          element={<Base />}
+        />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
