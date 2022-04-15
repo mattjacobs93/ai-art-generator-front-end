@@ -4,11 +4,11 @@
 <hr/>
 
 <!-- Deployed area -->
-### Deployment Link
-
+### **Deployment Link**
+[AI Art Generator](https://aiartgenerator.herokuapp.com/)
 <hr/>
 
-## Description
+## *Description*
 
 🖌️  Ai art generator is a Flask/Python backend and React frontend application where users can utilize the power of artifical intelligence to style content images.
 
@@ -18,17 +18,17 @@ Check out our [Backend Repo](https://github.com/Euril/ai-art-generator-api) for 
 <hr/>
 
 <!-- we can add images of some pages here -->
-## Preview
+## *Preview*
 🤖 This page demonstrates where users will be able to choose a Content Image and a Style Image. After clicking 'Submit', the backend receives a request and the image styling is initiated.
 ![createimage](./public/createimage.png)
 🦾 Take a look at an example of what the AI creates with the content image on the bottom left and the style image on the bottom right.
 ![example](./public/exampleart.png)
 
 
-## App Info
 
 
-## Technologies Used
+
+## *Technologies Used*
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -41,18 +41,19 @@ Check out our [Backend Repo](https://github.com/Euril/ai-art-generator-api) for 
 
 
 
-## Planning 
+## *Planning* 
 Planning through Trello
 [https://trello.com/b/YFyGjZMB/ai-nft-art-generator]
 
 
-## Ice Box / Stretch Goals
+## *Ice Box / Stretch Goals*
 
 - [ ] Add a selection of style images a user can choose from
+- [ ] Merge with Social NFT
 
 <hr/>
 
-## Acknowledgments
+## *Acknowledgments*
 
 Cloudinary <br>
 [https://cloudinary.com/]
