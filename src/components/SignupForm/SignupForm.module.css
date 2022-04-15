@@ -41,7 +41,7 @@
   background-color: inherit;
 } 
 
-input {
+input, button {
   border:none;
   font-size: 20px;
   appearance: none;
@@ -94,6 +94,6 @@ input::placeholder {
 } */
 
 
-button {
+ {
   width: 100px;
 }
