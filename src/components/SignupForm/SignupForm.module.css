@@ -31,10 +31,14 @@
 }
 
 .inputContainer {
- font-family: sans-serif;
- border: none;
- appearance: none;
- background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  border: none;
+  appearance: none;
+  background-color: inherit;
 } 
 
 input {
@@ -90,3 +94,6 @@ input::placeholder {
 } */
 
 
+button {
+  width: 100px;
+}
